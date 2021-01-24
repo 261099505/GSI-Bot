@@ -4,7 +4,7 @@ on: [push]
 
 env:
   ROM: MIUI
-  ROM_LINK: https://bigota.d.miui.com/V11.0.1.0.QCMINXM/miui_PINEINGlobal_V11.0.1.0.QCMINXM_bd739880d3_10.0.zip 
+  ROM_LINK: https://211-95-34-2.ksyungslb.com/bigota.d.miui.com/21.1.20/miui_LAURUS_21.1.20_a5c6929058_10.0.zip?ksy_gslb_referer=https%3A%2F%2Fgithub.com%2FmooseIre%2Fupdate_miui_ota%2Fblob%2Fmaster%2FDevelop%2F%25E5%25B0%258F%25E7%25B1%25B3CC%25209e.md
   MIR: gof
   TZ: America/Sao_Paulo
   READ: Warning! This is A64 (Binder) based firmware.
@@ -47,8 +47,8 @@ jobs:
                chmod +x $ROM/build.sh
                . $ROM/build.sh
                
-       - name: Copy and rename A-Only build info
-         run: cp ErfanGSIs/output/*Aonly*.txt Aonly.txt
+       - name: Copy and rename AB build info
+         run: cp ErfanGSIs/output/*AB*.txt AB.txt
 
        - name: Send build info to Telegram
          env:
